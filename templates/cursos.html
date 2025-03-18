@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+{%block head%}
+		<title>ESIBot | Cursos</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/cursos.css')}}">
+{%endblock%}
+{%block body%}
+<!-- TÍTULO -->
+<div class="titulos" >
+	<h2>Cursos</h2>
+	<h3>¡Aprende con nosotros!</h3>
+</div>
+<p class="texto">Si quieres adquirir alguna habilidad nueva o ampliar tus conocimientos en algún campo, nuestros cursos son para tí. Ofrecemos temas muy variados, así como horarios flexibles y profesores con muchas ganas de enseñar.</p>
+<p class="texto">Nuestros cursos son <b>totalmente gratuitos</b>, con la única condición de que se ha de ser miembro para poder participar en ellos y obtener su documentación, así que ya sabes, ¿a qué estás esperando? ¡Únete a <b>ESIBot</b> y disfruta de todos los beneficios!</p>
+<p class="texto">Si todavía estás dudoso, a continuación te dejamos el proyecto docente de los cursos que estamos impartiendo ahora mismo, ¡No te lo pierdas!</p>
+
+<!-- ACORDEON -->
+<div id="acordeon">
+	<ul>
+	  <li id="cad">
+		<input type="checkbox" checked>
+		<i></i>
+		<h2>Diseño e Impresión 3D</h2>
+		<p>En este curso aprenderás a utilizar FreeCAD, una herramienta de diseño 3D que es empleada por empresas y aficionados para plasmar ideas en modelos que pueden ser impresos a posteriori. Y, además, aprenderás a imprimir esos modelos. <br/><a href="/cursos/diseno">Proyecto Docente</a></p>
+	  </li>
+	  <li id="python">
+		<input type="checkbox" checked>
+		<i></i>
+		<h2>Python</h2>
+		<p>Python es uno de los lenguajes de programación más sencillos de aprender y más útiles para todo tipo de público. Con nosotros podrás desarrollar tus habilidades de programación. <br/><a href="/cursos/python">Proyecto Docente</a></p>
+	  </li>
+	  <li id="arduino">
+		<input type="checkbox" checked>
+		<i></i>
+		<h2>Robótica</h2>
+		<p>En este curso aprenderás los fundamentos básicos de los pilares que sostienen a la robótica: electrónica, diseño y control.
+			La metodología de enseñanza comprenderá: Lecciones teóricas, ejercicios teóricos, lecciones prácticas, y aplicaciones a Arduino.
+			No importa el nivel con el que partas. El curso está orientado para tanto aprender desde cero, como complementar los conocimientos de ciertas asignaturas, o incluso profundizar en ciertos detalles que no se explican en la carrera. Siempre hay margen para aprender. <br/><a href="/cursos/robotica">Proyecto Docente</a></p>
+	  </li>
+	</ul>
+  </div>
+<br/><br/>
+{%endblock%}

@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block head%}
+		<title>ESIBot | Cursos: Diseño e Impresión 3D</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/cursos.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/pdf_viewer.css')}}">
+{%endblock%}
+{%block body%}
+<!-- TÍTULO -->
+<div class="titulos" >
+	<h2>DISEÑO E IMPRESIÓN 3D</h2>
+	<h3>¡Plasma tu imaginación!</h3>
+</div>
+<embed src="{{url_for('static', filename='embeded/Proyecto_docente_diseño_3d.pdf')}}" type="application/pdf" />
+{%endblock%}

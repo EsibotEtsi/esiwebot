@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{%block head%}
+		<title>ESIBot | Cursos: Python</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/cursos.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/pdf_viewer.css')}}">
+{%endblock%}
+{%block body%}
+<!-- TÍTULO -->
+<div class="titulos" >
+	<h2>PYTHON</h2>
+	<h3>¡Desarrolla tus habilidades!</h3>
+</div>
+<embed src="{{url_for('static', filename='embeded/Proyecto_docente_python.pdf')}}" type="application/pdf" />
+{%endblock%}

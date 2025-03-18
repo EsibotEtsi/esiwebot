@@ -1,0 +1,169 @@
+{%extends 'base.html'%}
+{%block head%}
+<title>ESIBot | ¿Quiénes somos?</title>
+<!-- CSS -->
+<link rel="stylesheet" href="{{url_for('static', filename='css/quienes-somos.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/team.css')}}">
+<!-- SCRIPTS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+{%endblock%}
+{%block body%}
+<!-- TÍTULO -->
+<div class="titulos">
+	<h2>¿QUIÉNES SOMOS?</h2>
+	<h3>Hagamos cuentas...</h3>
+</div>
+<!-- DATOS -->
+<section class="wrapper">
+<div class="container">
+	<article class="card card--stripe">
+		<h2 class="card__title">ALCANCE</h2>
+		<p>Contamos con más de <b>600 seguidores</b> entre todas nuestras redes sociales (Twitter / Instagram).</p>
+	</article>
+
+	<article class="card card--stripe">
+		<h2 class="card__title">46</h2>
+		<p>Con un total de 46 miembros en activo, ESIBot es una asociación con gran alcance dentro de la escuela.</p>
+	</article>
+
+	<article class="card card--stripe">
+		<h2 class="card__title">18 AÑOS</h2>
+		<p>La asociación es fundada en 2005, aunque sin actividad oficial hasta el año 2009, siendo más longeva que algunos de sus miembros...</p>
+	</article>
+</div>
+</section>
+
+<!-- ACORDEÓN -->
+<main>
+
+<section class="container--fluid">
+
+	<article class="article--fluid">
+		<img src="{{url_for('static', filename='img/varita.png')}}"></i>
+		<h2 class="article__title">¿Qué Hacemos?</h2>
+		<p class="article__text">Somos una asociación universitaria cuyo principal - pero no único - campo de especialización es la robótica.</p>
+		<p class="article__text"><b>ESIBot</b> organiza <b>cursos</b>, <b>excursiones</b> y <b>proyectos</b> de varias ramas de la ingeniería, intentando enfocar a sus miembros a una visión más global del mundo de la ingeniería. Te ayudamos a satisfacer tu curiosidad y a conocer gente nueva en otros sectores.</p>
+		<p class="article__text"><b>¡Que no te engañen!</b> tocamos áreas tan diversas de la tecnología como son la electrónica, la programación, el diseño 3D, la robótica o la telemática, ¡Aquí hay un hueco para todo el mundo! No somos elitistas y cualquiera puede inscribirse sin compromiso y de forma <b>totalmente gratuita</b> siempre que tenga ganas de aprender y de pasárselo bien mientras adquiere habilidades nuevas.</p>
+	</article>
+
+	<article class="article--fluid">
+		<img src="{{url_for('static', filename='img/brujula.png')}}"></i>
+		<h2 class="article__title">¿Dónde Estamos?</h2> 
+		<div id="idmap" style = "width:100%; height:450px;"></div>
+
+		<script type="text/javascript">
+		var mapOptions = {
+		center: [37.41103290169248, -6.001127516144121],
+		zoom: 17
+		}    
+
+		var Mapa = new L.map('idmap', mapOptions);
+			
+		var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+		layer.addTo(Mapa);
+			
+			
+		var ubi = L.marker([37.41103290169248, -6.001127516144121]);
+		ubi.addTo(Mapa);
+			
+		ubi.bindPopup("<h4>¡Aquí estamos! (puerta 6)</h4>");
+		ubi.openPopup();
+
+		</script> 
+		<p class="article__text">¡Ven a visitarnos en cualquier momento!</p>
+		<p class="article__text">Estamos situados en el taller de asociaciones, dentro del aula de cultura. Para acceder sólo tienes que bajar por las escaleras de la puerta 6 y nos verás a mano derecha.</p>
+	</article>
+	<article class="article--fluid">
+					<img src="{{url_for('static', filename='img/cara.png')}}" alt="Equipo">
+					<h2 class="article__title">Equipo Directivo</h2>
+				</section>
+			</main>
+			<!-- EQUIPO -->
+			<section>
+				<div class="equipo">
+					<div class="flex-center sm-no-flex">
+			
+						<div class="pull-right sm-no-float">
+							<table class="team-members">
+								<!-- single member row starts -->
+								<tr class="clearfix">
+									<td class="member-details">
+										<div>
+											<img src="static/img/contacto/Luis.jpeg" alt="Luis">
+											<div class="member-info">
+												<h3>Luis Moreno</h3>
+												<p>Presidente</p>
+												<p class="titulacion">GIERM</p>
+			\								</div>
+										</div>
+									</td>
+								
+									<td class="member-details">
+										<div>
+											<img src="static/img/contacto/Carmen.jpg" alt="Carmen">
+											<div class="member-info">
+												<h3>Carmen Limones</h3>
+												<p>Vicepresidente</p>
+												<p class="titulacion">GII</p>
+											</div>
+										</div>
+									</td>
+								
+									<td class="member-details">
+										<div>
+											<img src="static/img/contacto/Cesar.jpg" alt="Cesar">
+											<div class="member-info">
+												<h3>César Wagener</h3>
+												<p>Secretario</p>
+												<p class="titulacion">GIERM</p>
+											</div>
+										</div>
+									</td>
+								</tr><!-- /single member row ends -->
+			
+								<tr class="clearfix"><!-- single member row starts -->
+								
+									<td class="member-details">
+										<div>
+											<img src="static/img/contacto/MiguelAngel.jpg" alt="MiguelAngel">
+											<div class="member-info">
+												<h3>Miguel Ángel Díaz</h3>
+												<p>Tesorero</p>
+												<p class="titulacion">GIERM</p>
+											</div>
+										</div>
+									</td>
+								
+									<td class="member-details">
+										<div>
+											<img src="static/img/contacto/Natalia.jpg" alt="Natalia">
+											<div class="member-info">
+												<h3>Natalia García</h3>
+												<p>Directora Creativa</p>
+												<p class="titulacion">GITT</p>
+											</div>
+										</div>
+									</td>
+								
+									<td class="member-details">
+										<div>
+											<img src="static/img/contacto/Mario.jpg" alt="Mario">
+											<div class="member-info">
+												<h3>Mario Rodríguez</h3>
+												<p>Director de Telemática</p>
+												<p class="titulacion">GITT</p>
+											</div>
+										</div>
+									</td>
+								</tr><!-- /single member row ends -->
+			
+							</table><!-- /end team-photos -->
+						</div>
+					</div><!-- /end row -->
+				</div><!-- /end container -->
+			</section>
+	</article>
+
+{%endblock%}
